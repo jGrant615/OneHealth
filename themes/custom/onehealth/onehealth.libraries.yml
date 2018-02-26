@@ -1,0 +1,10 @@
+# Define libraries here. All CSS & Javascript libraries must be defined here.
+global-css:
+  css:
+    theme:
+      css/style.css: {}
+global-js:
+  js:
+    js/main.js: {}
+  dependencies: 
+    - core/jquery

@@ -1,0 +1,32 @@
+{# To call a region, use syntax {{ page.region-name }}
+ # All regions are defined in onehealth.info.yml 
+ # Content included in each region can be changed in drupal site manager under 'Structure'  #}
+
+<div class="layout-container">
+
+  <header role="banner">
+    {{ page.header }}
+  </header>
+  <main role="main">
+    <div class="row container">
+      <div class="col-md-8">
+        <a id="main-content " tabindex="-1"></a>{# link is in html.html.twig #}
+        <div class="layout-content">
+          {{ page.content }}
+        </div>{# /.layout-content #}
+      </div>
+      <div class="col-md-4 sidebar">
+         {% if page.sidebar %}
+          <aside class="layout-sidebar-first" role="complementary">
+            {{ page.sidebar }}
+          </aside>
+        {% endif %}
+        </div>
+    </div>
+  </main>
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+</div>{# /.layout-container #}
